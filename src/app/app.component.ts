@@ -25,10 +25,11 @@ import { FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
 export class AppComponent implements OnInit {
 
   formConfig:any;
+
+  thisControl:any = "";
   reactiveForm: FormGroup = new FormGroup({});
   validators = []  //new Array<Validators>();
-
-
+  
 
   constructor(private fb: FormBuilder) { 
     this.formConfig = fConfig;  
@@ -50,12 +51,14 @@ export class AppComponent implements OnInit {
         row.fields.forEach(field => {
           this.reactiveForm.addControl(field.key, new FormControl(field.defaultValue));
           this.reactiveForm.get(field.key).setValidators(this.validators);
+          this.thisControl = this.reactiveForm.get(field.key).status;
+          console.log("controllo status ",field.key + "->"+ this.thisControl) 
         });
           this.reactiveForm.updateValueAndValidity();
       })
     });
 
-    console.log(this.validators) 
+    
     
   } 
   

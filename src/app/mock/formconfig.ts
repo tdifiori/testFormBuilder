@@ -101,32 +101,6 @@
                ]
               }
             ]
-          },
-                    {
-            "fields": [
-              {
-                "label": "Valida 1",
-                "type": "radio",
-                "key": "valida1",
-                "defaultValue":"",
-                "rules": [
-                  'Validators.requiredTrue'
-               ]
-              }
-            ]
-          },
-          {
-            "fields": [
-              {
-                "label": "Valida 2",
-                "type": "radio",
-                "key": "valida2",
-                "defaultValue":"",
-                "rules": [
-                  'Validators.requiredTrue'
-               ]
-              }
-            ]
           }
         ]   
       },

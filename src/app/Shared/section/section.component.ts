@@ -23,6 +23,10 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
                       name="{{field.key}}"  
                       class="form-control form-control-sm" 
                       placeholder="{{field.label}}" 
+                      [ngClass]= "{
+                        'is-invalid': thisControl === 'invalid',
+                        'is-valid': thisControl === 'valid'
+                      }"
                    >   
                 </div>              
 
