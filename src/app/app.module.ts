@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule  } from '@angular/forms';
 
 import { SectionComponent } from './Shared/section/section.component';
+import { RowComponent } from './Shared/row/row.component';
+import { ControlInlinTemplateComponent } from './Shared/control/control.component';
 
 
 @NgModule({
   declarations: [
     SectionComponent,
     AppComponent,
+    RowComponent,
+    ControlInlinTemplateComponent,
     
   ],
   imports: [
