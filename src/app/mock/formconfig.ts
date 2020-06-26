@@ -1,6 +1,6 @@
 
  const formConfig = {
-  "title": "Domanda dipartecipazione",
+  "title": "(dev) Domanda dipartecipazione",
   "description": "Eventuale descrizione della form",
   "sections": [
     {
