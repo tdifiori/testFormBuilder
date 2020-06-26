@@ -12,6 +12,7 @@
                 "label": "Nome",
                 "type": "text",
                 "key": "nome",
+                "defaultValue":"",
                  "rules": 
                   [
                     "Validators.required",
@@ -27,6 +28,7 @@
                 "label": "Cognome",
                 "type": "text",
                 "key": "cognome",
+                "defaultValue":"",
                 "rules": [
                   'Validators.required',
                   'Validators.minLength(2)',
@@ -41,6 +43,7 @@
                 "label": "Data",
                 "type": "text",
                 "key": "data",
+                "defaultValue":"",
                 "rules": [
                   'Validators.required',
                   'Validators.minLength(8)',
@@ -55,6 +58,7 @@
                 "label": "Luogo",
                 "type": "text",
                 "key": "luogo",
+                "defaultValue":"",
                 "rules": [
                   'Validators.required',
                   'Validators.minLength(6)',
@@ -74,6 +78,7 @@
                 "label": "Dichiarazione 1",
                 "type": "text",
                 "key": "dichiarazione1",
+                "defaultValue":"",
                 "rules": [
                   'Validators.required',
                   'Validators.minLength(12)',
@@ -88,10 +93,37 @@
                 "label": "Dichiarazione 2",
                 "type": "text",
                 "key": "dichiarazione2",
+                "defaultValue":"",
                 "rules": [
                   'Validators.required',
                   'Validators.minLength(12)',
                   'Validators.maxLength(14)'
+               ]
+              }
+            ]
+          },
+                    {
+            "fields": [
+              {
+                "label": "Valida 1",
+                "type": "radio",
+                "key": "valida1",
+                "defaultValue":"",
+                "rules": [
+                  'Validators.requiredTrue'
+               ]
+              }
+            ]
+          },
+          {
+            "fields": [
+              {
+                "label": "Valida 2",
+                "type": "radio",
+                "key": "valida2",
+                "defaultValue":"",
+                "rules": [
+                  'Validators.requiredTrue'
                ]
               }
             ]
@@ -107,6 +139,7 @@
                 "label": "Titolo professionale",
                 "type": "text",
                 "key": "titolo",
+                "defaultValue":"",
                 "rules": [
                   'Validators.required',
                   'Validators.minLength(2)',
@@ -121,6 +154,7 @@
                 "label": "Indirizzo titolo",
                 "type": "select",
                 "key": "indirizzo_titolo",
+                "defaultValue":"",
                 "options": [
                   { 
                     "value": "Informatica", 

@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
     this.formConfig.sections.forEach(sections => {
       sections.rows.forEach(row => {
         row.fields.forEach(field => {
-          this.reactiveForm.addControl(field.key, new FormControl("" ));
+          this.reactiveForm.addControl(field.key, new FormControl(field.defaultValue));
           this.reactiveForm.get(field.key).setValidators(this.validators);
         });
           this.reactiveForm.updateValueAndValidity();

@@ -15,13 +15,42 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
             <div class="form-label-group" *ngFor="let field of rows.fields" >
               <div [ngSwitch]="field.type">
       
+                <div  *ngSwitchCase="'text'" class="form-group" >
+                    <label >{{field.label}}</label>
+                    <input 
+                      formControlName="{{field.key}}"  
+                      type="{{field.type}}" 
+                      name="{{field.key}}"  
+                      class="form-control form-control-sm" 
+                      placeholder="{{field.label}}" 
+                   >   
+                </div>              
+
+                <div  *ngSwitchCase="'radio'" class="form-check">
+                  <input class="form-check-input" 
+                    formControlName="{{field.key}}" 
+                    type="{{field.type}}" 
+                    name="{{field.key}}" 
+                    value="option2"
+                  >
+                  <label class="form-check-label">{{field.label}}</label>
+                </div>
+
+
+
+                <div *ngSwitchCase="'select'" >
                 <label>{{field.label}}</label>
-                  <input  *ngSwitchCase="'text'" formControlName="{{field.key}}"  type="{{field.type}}" name="{{field.key}}"  class="form-control" placeholder="{{field.label}}" required autofocus>   
-              
-                  <select *ngSwitchCase="'select'" formControlName="{{field.key}}"  name="{{field.key}}" class="form-control" >
+                  <select 
+                    formControlName="{{field.key}}"  
+                    name="{{field.key}}" 
+                    class="form-control form-control-sm" >
                     <option *ngFor="let select of field.options">{{select.title}}</option>
                   </select>
-        
+                </div>        
+
+
+
+
               </div> 
             </div>
           </div><!-- end col -->
