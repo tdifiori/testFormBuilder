@@ -53,7 +53,6 @@ export class AppComponent implements OnInit {
           this.reactiveForm.get(field.key).setValidators(this.validators);
           this.thisControl = this.reactiveForm.get(field.key).status;
           console.log("controllo status ",field.key + "->"+ this.thisControl) 
-          
         });
           this.reactiveForm.updateValueAndValidity();
       })
