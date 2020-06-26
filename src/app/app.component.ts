@@ -13,11 +13,14 @@ import { FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
       <hr>
         <form  [formGroup]="reactiveForm" (ngSubmit)="submitForm()" >
           <app-section *ngFor="let section of formConfig.sections" [sectionForm]="section" [group]="reactiveForm" ></app-section>
-            <button type="submit"  class="btn btn-primary">Invia</button> <b>form status:</b> {{ reactiveForm.status | json}}
+            <button [disabled]="reactiveForm.invalid" type="submit"  class="btn btn-primary">Invia</button> <b>  form status:</b> {{ reactiveForm.status }}
             <hr>
-            <button type="button"  (click)="reset()" class="btn btn-primary">Reset</button> 
+            <button type="button"  (click)="reset()" class="btn btn-primary" >Reset</button> 
         </form>
-        form value: {{ reactiveForm.value | json }}
+        <div class="alert alert-success" role="alert">
+          form value: <pre><code>{{ reactiveForm.value | json }}</code></pre>
+        </div>
+        
   </div>
   `,
   styleUrls: ['./app.component.scss']
@@ -25,10 +28,8 @@ import { FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
 export class AppComponent implements OnInit {
 
   formConfig:any;
-
-  thisControl:any = "";
   reactiveForm: FormGroup = new FormGroup({});
-  validators = []  //new Array<Validators>();
+  validators = [];
   
 
   constructor(private fb: FormBuilder) { 
@@ -46,19 +47,26 @@ export class AppComponent implements OnInit {
 
 
 // qui invece nn faccio altro che scorrere sul json 
+let group = {};
+  
     this.formConfig.sections.forEach(sections => {
       sections.rows.forEach(row => {
         row.fields.forEach(field => {
-          this.reactiveForm.addControl(field.key, new FormControl(field.defaultValue));
-          this.reactiveForm.get(field.key).setValidators(this.validators);
-          this.thisControl = this.reactiveForm.get(field.key).status;
-          console.log("controllo status ",field.key + "->"+ this.thisControl) 
+
+        group[field.key] = [field.defaultValue, this.validators]
+        this.reactiveForm = this.fb.group(group);
+        
+        /*
+        this.reactiveForm.addControl(field.key, new FormControl(field.defaultValue));
+        this.reactiveForm.get(field.key).setValidators(this.validators); 
+        */
+
         });
           this.reactiveForm.updateValueAndValidity();
       })
     });
-
-    
+console.log(this.reactiveForm.controls); 
+   
     
   } 
   
