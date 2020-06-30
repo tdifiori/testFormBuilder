@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import fConfig from './mock/formconfig'
-import { FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormControl, ValidatorFn} from '@angular/forms';
 
 
 
@@ -38,24 +38,31 @@ export class AppComponent implements OnInit {
 
   
   ngOnInit() {
-  // questo è un array statico ma in realta poi prendero quello che sta nel json
-  this.validators = [
-    Validators.required,
-    Validators.minLength(2),
-    Validators.maxLength(55)
-  ] 
+    // questo è un array statico ma in realta poi prendero quello che sta nel json
+    this.validators = [
+     // Validators.required,
+    //  Validators.minLength(2),
+     // Validators.maxLength(55)
+    ] 
 
 
-// qui invece nn faccio altro che scorrere sul json 
-let group = {};
-  
+  // qui invece nn faccio altro che scorrere sul json 
+  let group = {};
     this.formConfig.sections.forEach(sections => {
       sections.rows.forEach(row => {
         row.fields.forEach(field => {
 
+          field.rules.forEach(rule => {
+           var x =  validatorFactory(rule)
+           //console.log(x)
+           this.validators.push(x);
+           console.log(x);
+            //console.log(rule)
+          })
+
         group[field.key] = [field.defaultValue, this.validators]
         this.reactiveForm = this.fb.group(group);
-        
+        this.validators = [];
         /*
         this.reactiveForm.addControl(field.key, new FormControl(field.defaultValue));
         this.reactiveForm.get(field.key).setValidators(this.validators); 
@@ -65,11 +72,27 @@ let group = {};
           this.reactiveForm.updateValueAndValidity();
       })
     });
-console.log(this.reactiveForm.controls); 
-   
+        console.log(this.reactiveForm.controls); 
+    
+
+
+
+    function validatorFactory(r): ValidatorFn {
+      if (r.value) {
+        return Validators[r.type](r.value);
+      }
+    return Validators[r.type];
+    }
+
+
     
   } 
   
+
+
+
+
+
 
 
 submitForm(){

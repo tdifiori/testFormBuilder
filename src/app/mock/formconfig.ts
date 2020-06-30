@@ -13,12 +13,11 @@
               "type": "text",
               "key": "nome",
               "defaultValue":"",
-               "rules": 
-                [
-                  "Validators.required",
-                  "Validators.minLength(3)",
-                  "Validators.maxLength(5)"
-                ]
+              "rules":[
+                {'type':"required"},
+                {'type':"minLength",'value':3},
+                {'type':"maxLength",'value':15}
+              ]
             }
           ]
         },
@@ -29,11 +28,11 @@
               "type": "text",
               "key": "cognome",
               "defaultValue":"",
-              "rules": [
-                'Validators.required',
-                'Validators.minLength(2)',
-                'Validators.maxLength(4)'
-             ]
+              "rules":[
+                {'type':"required"},
+                {'type':"minLength",'value':3},
+                {'type':"maxLength",'value':12}
+              ]
             }
           ]
         },
@@ -44,11 +43,11 @@
               "type": "text",
               "key": "data",
               "defaultValue":"",
-              "rules": [
-                'Validators.required',
-                'Validators.minLength(8)',
-                'Validators.maxLength(8)'
-             ]
+              "rules":[
+                {'type':"required"},
+                {'type':"minLength",'value':2},
+                {'type':"maxLength",'value':23}
+              ]
             }
           ]
         },
@@ -59,11 +58,11 @@
               "type": "text",
               "key": "luogo",
               "defaultValue":"",
-              "rules": [
-                'Validators.required',
-                'Validators.minLength(6)',
-                'Validators.maxLength(7)'
-             ]
+              "rules":[
+                {'type':"required"},
+                {'type':"minLength",'value':2},
+                {'type':"maxLength",'value':22}
+              ]
             }
           ]
         }
@@ -79,11 +78,11 @@
               "type": "text",
               "key": "dichiarazione1",
               "defaultValue":"",
-              "rules": [
-                'Validators.required',
-                'Validators.minLength(12)',
-                'Validators.maxLength(14)'
-             ]
+              "rules":[
+                {'type':"required"},
+                {'type':"minLength",'value':3},
+                {'type':"maxLength",'value':33}
+              ]
             }
           ]
         },
@@ -94,11 +93,11 @@
               "type": "text",
               "key": "dichiarazione2",
               "defaultValue":"",
-              "rules": [
-                'Validators.required',
-                'Validators.minLength(12)',
-                'Validators.maxLength(14)'
-             ]
+              "rules":[
+                {'type':"required"},
+                {'type':"minLength",'value':3},
+                {'type':"maxLength",'value':33}
+              ]
             }
           ]
         }
@@ -114,11 +113,11 @@
               "type": "text",
               "key": "titolo",
               "defaultValue":"",
-              "rules": [
-                'Validators.required',
-                'Validators.minLength(2)',
-                'Validators.maxLength(5)'
-             ]
+              "rules":[
+                {'type':"required"},
+                {'type':"minLength",'value':2},
+                {'type':"maxLength",'value':13}
+              ]
             }
           ]
         },
@@ -143,11 +142,11 @@
                   "title": "Fisica"
                 }
               ],
-              "rules": [
-                'Validators.required',
-                'Validators.minLength(6)',
-                'Validators.maxLength(6)'
-             ]
+              "rules":[
+                {'type':"required"},
+                {'type':"minLength",'value':3},
+                {'type':"maxLength",'value':12}
+              ]
             }
           ]
         }
