@@ -38,16 +38,10 @@ export class AppComponent implements OnInit {
 
   
   ngOnInit() {
-    // questo è un array statico ma in realta poi prendero quello che sta nel json
-    this.validators = [
-     // Validators.required,
-    //  Validators.minLength(2),
-     // Validators.maxLength(55)
-    ] 
 
-
-  // qui invece nn faccio altro che scorrere sul json 
+  //this.validators = [] 
   let group = {};
+
     this.formConfig.sections.forEach(sections => {
       sections.rows.forEach(row => {
         row.fields.forEach(field => {
