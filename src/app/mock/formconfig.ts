@@ -143,9 +143,7 @@
                 }
               ],
               "rules":[
-                {'type':"required"},
-                {'type':"minLength",'value':3},
-                {'type':"maxLength",'value':12}
+                {'type':"required"}
               ]
             }
           ]

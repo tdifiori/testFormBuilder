@@ -41,14 +41,15 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
                 </div>
 
 
-
                 <div *ngSwitchCase="'select'" >
                 <label>{{field.label}}</label> 
                   <select 
                     formControlName="{{field.key}}"  
                     name="{{field.key}}" 
                     class="form-control form-control-md" >
-                    <option *ngFor="let select of field.options">{{select.title}}</option>
+                    <option *ngFor="let select of field.options" value={{select.title}}>
+                      {{select.title}}
+                    </option>
                   </select>
                 </div>        
 
