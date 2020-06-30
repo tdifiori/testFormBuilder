@@ -130,6 +130,10 @@
               "defaultValue":"",
               "options": [
                 { 
+                  "value": "", 
+                  "title": ""
+                },
+                { 
                   "value": "Informatica", 
                   "title": "Informatica"
                 },

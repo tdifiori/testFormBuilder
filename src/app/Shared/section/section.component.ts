@@ -18,15 +18,15 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
                 <div  *ngSwitchCase="'text'" class="form-group" >
                     <label >{{field.label}}</label> 
                     <input 
+                      [ngClass]= "{
+                        'is-invalid': group.controls[field.key].status === 'INVALID',
+                        'is-valid': group.controls[field.key].status === 'VALID'
+                      }"
                       formControlName="{{field.key}}"  
                       type="{{field.type}}" 
                       name="{{field.key}}"  
                       class="form-control form-control-md" 
                       placeholder="{{field.label}}" 
-                      [ngClass]= "{
-                        'is-invalid': group.controls[field.key].status === 'INVALID',
-                        'is-valid': group.controls[field.key].status === 'VALID'
-                      }"
                    >   
                 </div>              
 
@@ -44,11 +44,15 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
                 <div *ngSwitchCase="'select'" >
                 <label>{{field.label}}</label> 
                   <select 
+                    [ngClass]= "{
+                        'is-invalid': group.controls[field.key].status === 'INVALID',
+                        'is-valid': group.controls[field.key].status === 'VALID'
+                    }"
                     formControlName="{{field.key}}"  
                     name="{{field.key}}" 
                     class="form-control form-control-md" >
-                    <option *ngFor="let select of field.options" value={{select.title}}>
-                      {{select.title}}
+                    <option *ngFor="let select of field.options" value={{select.value}}
+                    >{{select.title}}
                     </option>
                   </select>
                 </div>        
