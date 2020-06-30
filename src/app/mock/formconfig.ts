@@ -16,7 +16,7 @@
               "rules":[
                 {'type':"required"},
                 {'type':"minLength",'value':3},
-                {'type':"maxLength",'value':15}
+                {'type':"maxLength",'value':7}
               ]
             }
           ]

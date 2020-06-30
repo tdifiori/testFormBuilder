@@ -54,20 +54,12 @@ export class AppComponent implements OnInit {
 
           field.rules.forEach(rule => {
            var x =  validatorFactory(rule)
-           //console.log(x)
            this.validators.push(x);
-           console.log(x);
-            //console.log(rule)
           })
 
-        group[field.key] = [field.defaultValue, this.validators]
-        this.reactiveForm = this.fb.group(group);
-        this.validators = [];
-        /*
-        this.reactiveForm.addControl(field.key, new FormControl(field.defaultValue));
-        this.reactiveForm.get(field.key).setValidators(this.validators); 
-        */
-
+          group[field.key] = [field.defaultValue, this.validators]
+            this.reactiveForm = this.fb.group(group);
+              this.validators = [];
         });
           this.reactiveForm.updateValueAndValidity();
       })
@@ -88,11 +80,6 @@ export class AppComponent implements OnInit {
     
   } 
   
-
-
-
-
-
 
 
 submitForm(){
