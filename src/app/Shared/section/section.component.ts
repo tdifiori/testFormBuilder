@@ -50,6 +50,11 @@ import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 
                 <div *ngSwitchCase="'select'" >
                 <label>{{field.label}}</label> 
+                <div class="row" >
+                  <div *ngFor="let rule of field.rules" style="font-size:0.6em;">
+                    {{rule.type + "("+ rule.value+")  ,  " }}
+                  </div>
+                </div>
                   <select 
                     [ngClass]= "{
                         'is-invalid': group.controls[field.key].status === 'INVALID',
