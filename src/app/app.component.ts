@@ -63,6 +63,8 @@ export class AppComponent implements OnInit {
 
 
 
+
+// funzione che mi converte il validatore del json in un validatorFn
     function validatorFactory(r): ValidatorFn {
       if (r.value) {
         return Validators[r.type](r.value);
