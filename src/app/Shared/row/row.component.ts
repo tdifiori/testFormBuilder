@@ -16,6 +16,7 @@ export class RowComponent implements OnInit {
 
   constructor() { }
 
+
   ngOnInit() {
   }
 

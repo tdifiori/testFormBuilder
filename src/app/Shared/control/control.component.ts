@@ -5,7 +5,7 @@ import { FormGroup } from '@angular/forms';
   selector: 'app-control',
   template: `
 
-<div class="col-md" >
+<div class="col" >
   <div [ngSwitch]="field.type" [formGroup]="group">
               
         <div  *ngSwitchCase="'text'" class="form-group" >
