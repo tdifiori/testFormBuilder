@@ -11,15 +11,16 @@ import { FormBuilder, FormGroup, Validators, FormControl, ValidatorFn} from '@an
     <div class="alert alert-primary text-center" role="alert">{{formConfig.title}}</div>
       <hr>
         <form  [formGroup]="reactiveForm" (ngSubmit)="submitForm()" >
-          <app-section *ngFor="let section of formConfig.sections" [sectionForm]="section" [group]="reactiveForm" ></app-section>
-            <button [disabled]="reactiveForm.invalid" type="submit"  class="btn btn-primary">Invia</button> <b>  form status:</b> {{ reactiveForm.status }}
-            <hr>
-            <button type="button"  (click)="reset()" class="btn btn-primary" >Reset</button> 
+          <div class="form-group">
+            <app-section *ngFor="let section of formConfig.sections" [sectionForm]="section" [group]="reactiveForm" ></app-section>
+              <button [disabled]="reactiveForm.invalid" type="submit"  class="btn btn-primary">Invia</button> <b>  form status:</b> {{ reactiveForm.status }}
+              <hr>
+              <button type="button"  (click)="reset()" class="btn btn-primary" >Reset</button> 
+          </div>
         </form>
         <div class="alert alert-success" role="alert">
           form value: <pre><code>{{ reactiveForm.value | json }}</code></pre>
         </div>
-        
   </div>
   `,
   styleUrls: ['./app.component.scss']
