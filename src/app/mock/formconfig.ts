@@ -18,11 +18,7 @@
                 {'type':"minLength",'value':3},
                 {'type':"maxLength",'value':7}
               ]
-            }
-          ]
-        },
-        {
-          "fields": [
+            },
             {
               "label": "Cognome",
               "type": "text",
@@ -33,11 +29,7 @@
                 {'type':"minLength",'value':3},
                 {'type':"maxLength",'value':12}
               ]
-            }
-          ]
-        },
-        {
-          "fields": [
+            },
             {
               "label": "Data",
               "type": "text",
@@ -48,11 +40,7 @@
                 {'type':"minLength",'value':2},
                 {'type':"maxLength",'value':23}
               ]
-            }
-          ]
-        },
-        {
-          "fields": [
+            },
             {
               "label": "Luogo",
               "type": "text",
@@ -65,7 +53,7 @@
               ]
             }
           ]
-        }
+        },
       ]  
     },
     {
@@ -100,7 +88,7 @@
               ]
             }
           ]
-        }
+        },
       ]   
     },
     {

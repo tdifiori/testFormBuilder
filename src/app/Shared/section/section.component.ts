@@ -6,11 +6,13 @@ import { FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-section',
   template: `
-  <div class="card" >
+  <div class="card">
     <div class="card-header bg-info" >{{config.title}}</div> 
       <div class="card-body">
         <div class="container">
+       
           <app-row *ngFor="let rows of config.rows" [fields] = rows.fields  [group]="group" ></app-row>
+
       </div>
     </div><!-- end card body -->
   </div>
