@@ -13,9 +13,10 @@ import { FormBuilder, FormGroup, Validators, FormControl, ValidatorFn} from '@an
         <form  [formGroup]="reactiveForm" (ngSubmit)="submitForm()" >
           <div class="form-group">
             <app-section *ngFor="let section of formConfig.sections" [sectionForm]="section" [group]="reactiveForm" ></app-section>
-              <button [disabled]="reactiveForm.invalid" type="submit"  class="btn btn-primary">Invia</button> <b>  form status:</b> {{ reactiveForm.status }}
-              <hr>
-              <button type="button"  (click)="reset()" class="btn btn-primary" >Reset</button> 
+              <button [disabled]="reactiveForm.invalid" type="submit"  class="btn btn-primary">Invia</button> 
+                <b>  form status:</b> {{ reactiveForm.status }}
+                  <hr>
+                    <button type="button"  (click)="reset()" class="btn btn-primary" >Reset</button> 
           </div>
         </form>
         <div class="alert alert-success" role="alert">
@@ -60,8 +61,6 @@ export class AppComponent implements OnInit {
     });
         console.log(this.reactiveForm.controls); 
     
-
-
 
 
 // funzione che mi converte il validatore del json in un validatorFn

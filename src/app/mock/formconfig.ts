@@ -153,6 +153,15 @@
               "rules":[
                 {'type':"required"}
               ]
+            },
+            {
+              "label": "Data",
+              "type": "date",
+              "key": "data",
+              "defaultValue":"",
+              "rules":[
+                {'type':"required"}
+              ]
             }
           ]
         }
