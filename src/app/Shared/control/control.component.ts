@@ -5,6 +5,7 @@ import { FormGroup } from '@angular/forms';
   selector: 'app-control',
   template: `
 
+<div class="col-md" >
   <div [ngSwitch]="field.type" [formGroup]="group">
               
         <div  *ngSwitchCase="'text'" class="form-group" >
@@ -22,7 +23,7 @@ import { FormGroup } from '@angular/forms';
           formControlName="{{field.key}}"  
           type="{{field.type}}" 
           name="{{field.key}}"  
-          class="form-control form-control-md" 
+          class="form-control form-control-sm" 
           placeholder="{{field.label}}" 
         >   
       </div>              
@@ -54,13 +55,13 @@ import { FormGroup } from '@angular/forms';
           }"
           formControlName="{{field.key}}"  
           name="{{field.key}}" 
-          class="form-control form-control-md" >
+          class="form-control form-control-sm" >
           <option *ngFor="let select of field.options" value={{select.value}}
           >{{select.title}}
           </option>
         </select>
       </div> 
-
+  </div>
 </div> 
   `,
   styleUrls: ['./control.component.css']
