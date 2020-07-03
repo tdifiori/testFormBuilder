@@ -7,14 +7,10 @@ import { FormGroup } from '@angular/forms';
 
 <div class="col" >
   <div [ngSwitch]="field.type" [formGroup]="group">
-              
+ 
         <div  *ngSwitchCase="'text'" class="form-group" >
         <label >{{field.label}}</label> 
-          <div class="row" >
-            <div *ngFor="let rule of field.rules" style="font-size:0.6em;">
-              {{rule.type + "("+ rule.value+")  ,  " }}
-            </div>
-          </div>
+          
         <input 
           [ngClass]= "{
             'is-invalid': group.controls[field.key].status === 'INVALID',
@@ -26,6 +22,11 @@ import { FormGroup } from '@angular/forms';
           class="form-control form-control-sm" 
           placeholder="{{field.label}}" 
         >   
+         <div class="row" style="font-size:0.6em;">
+            <div  *ngFor="let rule of field.rules" >
+              {{rule.type + "("+ rule.value+")  ,  " }}
+            </div>
+          </div>
       </div>              
 
 
