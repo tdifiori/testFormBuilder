@@ -7,10 +7,10 @@ import { FormGroup } from '@angular/forms';
 
 <div class="col" >
   <div [ngSwitch]="field.type" [formGroup]="group">
+
  
-        <div  *ngSwitchCase="'text'" class="form-group" >
-        <label >{{field.label}}</label> 
-          
+    <div  *ngSwitchCase="'text'" class="form-group" >
+      <label >{{field.label}}</label> 
         <input 
           [ngClass]= "{
             'is-invalid': group.controls[field.key].status === 'INVALID',
@@ -22,33 +22,28 @@ import { FormGroup } from '@angular/forms';
           class="form-control form-control-sm" 
           placeholder="{{field.label}}" 
         >   
-         <div class="row" style="font-size:0.6em;">
+          <div class="row" style="font-size:0.6em;">
             <div  *ngFor="let rule of field.rules" >
               {{rule.type + "("+ rule.value+")  ,  " }}
             </div>
           </div>
-      </div>              
+    </div>              
 
 
-      <div  *ngSwitchCase="'radio'" class="form-check">
-        <input class="form-check-input" 
-          formControlName="{{field.key}}" 
-          type="{{field.type}}" 
-          name="{{field.key}}" 
-          value="option2"
-        >
-        <label class="form-check-label">{{field.label}}</label>
-      </div>
+    <div  *ngSwitchCase="'radio'" class="form-check">
+      <input class="form-check-input" 
+        formControlName="{{field.key}}" 
+        type="{{field.type}}" 
+        name="{{field.key}}" 
+        value="option2"
+      >
+      <label class="form-check-label">{{field.label}}</label>
+    </div>
 
 
 
-      <div *ngSwitchCase="'select'" >
+    <div *ngSwitchCase="'select'" >
       <label>{{field.label}}</label> 
-      <div class="row" >
-          <div *ngFor="let rule of field.rules" style="font-size:0.6em;">
-            {{rule.type + "("+ rule.value+")  ,  " }}
-          </div>
-        </div>
         <select 
           [ngClass]= "{
               'is-invalid': group.controls[field.key].status === 'INVALID',
@@ -57,11 +52,18 @@ import { FormGroup } from '@angular/forms';
           formControlName="{{field.key}}"  
           name="{{field.key}}" 
           class="form-control form-control-sm" >
-          <option *ngFor="let select of field.options" value={{select.value}}
-          >{{select.title}}
+          <option *ngFor="let select of field.options" value={{select.value}}>
+            {{select.title}}
           </option>
         </select>
-      </div> 
+          <div class="row" >
+            <div *ngFor="let rule of field.rules" style="font-size:0.6em;">
+              {{rule.type + "("+ rule.value+")  ,  " }}
+            </div>
+          </div>
+    </div> 
+
+
   </div>
 </div> 
   `,

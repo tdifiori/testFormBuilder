@@ -9,10 +9,8 @@ import { FormGroup } from '@angular/forms';
   <div class="card">
     <div class="card-header bg-info" >{{config.title}}</div> 
       <div class="card-body">
-       
           <app-row *ngFor="let rows of config.rows" [fields] = rows.fields  [group]="group" ></app-row>
-      
-    </div><!-- end card body -->
+      </div>
   </div>
   <hr>
   `,

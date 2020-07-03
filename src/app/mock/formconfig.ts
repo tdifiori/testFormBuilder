@@ -106,11 +106,7 @@
                 {'type':"minLength",'value':2},
                 {'type':"maxLength",'value':13}
               ]
-            }
-          ]
-        },
-        {
-          "fields": [
+            },
             {
               "label": "Indirizzo titolo",
               "type": "select",
