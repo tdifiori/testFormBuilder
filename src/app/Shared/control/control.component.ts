@@ -31,13 +31,18 @@ import { FormGroup } from '@angular/forms';
 
 
     <div  *ngSwitchCase="'radio'" class="form-check">
+    <label class="form-check-label">
       <input class="form-check-input" 
+        [ngClass]= "{
+          'is-invalid': group.controls[field.key].status === 'INVALID',
+          'is-valid': group.controls[field.key].status === 'VALID'
+        }"
         formControlName="{{field.key}}" 
         type="{{field.type}}" 
-        name="{{field.key}}" 
-        value="option2"
+        name="{{field.key}}"
+        value="{{field.value}}" 
       >
-      <label class="form-check-label">{{field.label}}</label>
+      {{field.label}}</label>
     </div>
 
 

@@ -71,6 +71,16 @@
                 {'type':"minLength",'value':3},
                 {'type':"maxLength",'value':33}
               ]
+            },
+            {
+              "label": "Accetta 1",
+              "type": "radio",
+              "key": "accetta1",
+              "defaultValue":"",
+              "value":"accetta1",
+              "rules":[
+                {'type':"required"}
+              ]
             }
           ]
         },
@@ -85,6 +95,16 @@
                 {'type':"required"},
                 {'type':"minLength",'value':3},
                 {'type':"maxLength",'value':33}
+              ]
+            },
+            {
+              "label": "Accetta 2",
+              "type": "radio",
+              "key": "accetta2",
+              "defaultValue":"",
+              "value":"accetta2",
+              "rules":[
+                {'type':"required"}
               ]
             }
           ]
