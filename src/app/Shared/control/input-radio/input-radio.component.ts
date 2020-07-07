@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { controls } from '../../../interface/control';
 
 @Component({
   selector: 'app-input-radio',
