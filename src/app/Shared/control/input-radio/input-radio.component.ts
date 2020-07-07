@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
@@ -18,14 +18,12 @@ import { FormGroup } from '@angular/forms';
         `,
   styleUrls: ['./input-radio.component.css']
 })
-export class InputRadioComponent implements OnInit {
-  
-  @Input('field') field:any;
-  @Input('group') group:FormGroup;
+export class InputRadioComponent implements controls {
+
+fieldConfig:any;
+group:FormGroup;
 
   constructor() { }
 
-  ngOnInit() {
-  }
 
 }

@@ -1,5 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { controls } from '../../../interface/control';
+
 
 @Component({
   selector: 'app-input-text',
@@ -26,14 +28,13 @@ import { FormGroup } from '@angular/forms';
  `,
   styleUrls: ['./input-text.component.css']
 })
-export class InputTextComponent implements OnInit {
+export class InputTextComponent implements controls {
 
-@Input('field') field:any;
-@Input('group') group:FormGroup;
+fieldConfig:any;
+group:FormGroup;
 
   constructor() { }
 
-  ngOnInit() {
-  }
+ 
 
 }

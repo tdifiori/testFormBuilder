@@ -1,5 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { controls } from '../../../interface/control';
+
+
 
 @Component({
   selector: 'app-input-select',
@@ -27,14 +30,14 @@ import { FormGroup } from '@angular/forms';
           `,
   styleUrls: ['./input-select.component.css']
 })
-export class InputSelectComponent implements OnInit {
-  
-  @Input('field') field:any;
-  @Input('group') group:FormGroup;
+export class InputSelectComponent implements controls {
+
+fieldConfig:any;
+group:FormGroup;
+
 
   constructor() { }
 
-  ngOnInit() {
-  }
+
 
 }
