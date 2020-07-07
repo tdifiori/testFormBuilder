@@ -11,7 +11,6 @@ import { ControlInlinTemplateComponent } from './Shared/control/control.componen
 import { InputTextComponent } from './Shared/control/input-text/input-text.component';
 import { InputSelectComponent } from './Shared/control/input-select/input-select.component';
 import { InputRadioComponent } from './Shared/control/input-radio/input-radio.component';
-import { HashMapComponentComponent } from './Shared/control/hash-map-component/hash-map-component.component';
 
 
 @NgModule({
@@ -22,8 +21,7 @@ import { HashMapComponentComponent } from './Shared/control/hash-map-component/h
     ControlInlinTemplateComponent,
     InputTextComponent,
     InputSelectComponent,
-    InputRadioComponent,
-    HashMapComponentComponent,
+    InputRadioComponent
     
   ],
   imports: [
