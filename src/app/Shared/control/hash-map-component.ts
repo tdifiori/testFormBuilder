@@ -8,9 +8,7 @@ import { Type } from '@angular/compiler';
 
 
 export const  component: {[ type: string ]: Type<controls> } = {
-
-text: InputTextComponent,
-select: InputSelectComponent,
-radio: InputRadioComponent
-
+  text: InputTextComponent,
+  select: InputSelectComponent,
+  radio: InputRadioComponent
 };
