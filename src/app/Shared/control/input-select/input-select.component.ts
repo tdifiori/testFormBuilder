@@ -4,6 +4,7 @@ import { FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-input-select',
   template: `
+<div class="col" [formGroup]="group">  
    <label>{{field.label}}</label> 
         <select 
           [ngClass]= "{
@@ -22,10 +23,14 @@ import { FormGroup } from '@angular/forms';
               {{rule.type + "("+ rule.value+")  ,  " }}
             </div>
           </div>
+</div>
           `,
   styleUrls: ['./input-select.component.css']
 })
 export class InputSelectComponent implements OnInit {
+  
+  @Input('field') field:any;
+  @Input('group') group:FormGroup;
 
   constructor() { }
 

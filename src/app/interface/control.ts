@@ -1,6 +1,6 @@
 import { FormGroup } from "@angular/forms";
 
 export interface controls{
-  field:any;
+  fieldConfig:any;
   group: FormGroup;
 }

@@ -4,6 +4,7 @@ import { FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-input-radio',
   template: `
+<div class="col" [formGroup]="group">    
    <label class="form-check-label">
         <input class="form-check-input" 
 
@@ -13,10 +14,14 @@ import { FormGroup } from '@angular/forms';
           value="{{field.value}}" 
         >
         {{field.label}}</label>
+</div>        
         `,
   styleUrls: ['./input-radio.component.css']
 })
 export class InputRadioComponent implements OnInit {
+  
+  @Input('field') field:any;
+  @Input('group') group:FormGroup;
 
   constructor() { }
 
