@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { component } from '.hash-map-component'
 
 @Component({
   selector: 'app-control',
