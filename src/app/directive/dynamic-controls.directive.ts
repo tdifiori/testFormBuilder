@@ -1,8 +1,16 @@
-import { Directive } from '@angular/core';
+import { Directive,OnInit } from '@angular/core';
 
 @Directive({
   selector: '[dynamicControl]',
 })
-export class DynamicControlDirective {
+export class DynamicControlDirective implements OnInit{
   constructor() { }
+
+
+
+ngOnInit(){
+  
+}
+
+
 }

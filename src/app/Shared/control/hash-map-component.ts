@@ -7,7 +7,7 @@ import { Type } from '@angular/compiler';
 
 
 
-export const  component: {[ type: string ]: Type<controls> } = {
+export const  components: {[ type: string ]: Type<controls> } = {
   text: InputTextComponent,
   select: InputSelectComponent,
   radio: InputRadioComponent
