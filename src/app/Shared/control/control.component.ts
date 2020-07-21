@@ -9,13 +9,14 @@ import { inputConf } from '../../interface/control';
   template: `
   <ng-container *ngFor="let field of config;" 
      dynamicControl 
+     [config]="field"
+     [group]="group"
   >
   </ng-container> 
   `,
   styleUrls: ["./control.component.css"]
 })
 export class ControlComponent implements OnInit {
-
   @Input('config') config: inputConf;
   @Input('group') group: FormGroup;
 

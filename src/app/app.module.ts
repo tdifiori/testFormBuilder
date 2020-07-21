@@ -13,7 +13,7 @@ import { InputSelectComponent } from './Shared/control/input-select/input-select
 import { InputRadioComponent } from './Shared/control/input-radio/input-radio.component';
 
 
-//import { DynamicControlDirective } from './directive/dynamic-controls.directive';
+import { DynamicControlDirective } from './directive/dynamic-controls.directive';
 
 @NgModule({
   declarations: [
@@ -23,8 +23,8 @@ import { InputRadioComponent } from './Shared/control/input-radio/input-radio.co
     ControlComponent,
     InputTextComponent,
     InputSelectComponent,
-    InputRadioComponent
-    
+    InputRadioComponent,
+    DynamicControlDirective
   ],
   imports: [
     BrowserModule,
