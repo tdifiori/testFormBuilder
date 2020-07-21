@@ -13,7 +13,10 @@ import { FormBuilder, FormGroup, Validators, FormControl, ValidatorFn} from '@an
         <form  [formGroup]="reactiveForm" (ngSubmit)="submitForm()" >
           <div class="form-group">
 
-            <app-section *ngFor="let section of formConfig.sections" [sectionForm]="section" [group]="reactiveForm" ></app-section>
+            <app-section *ngFor="let section of formConfig.sections"        [section]="section" 
+              [group]="reactiveForm" 
+            >
+            </app-section>
             
               <button [disabled]="reactiveForm.invalid" type="submit"  class="btn btn-primary">Invia</button> 
                 <b>  form status:</b> {{ reactiveForm.status }}

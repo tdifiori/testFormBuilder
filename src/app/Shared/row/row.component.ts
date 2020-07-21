@@ -5,13 +5,17 @@ import { FormGroup } from '@angular/forms';
   selector: 'app-row',
   template: `
   <div class="row">
-    <app-control *ngFor="let field of fields" [config]=field  [group]="group" ></app-control>
+    <app-control *ngFor="let field of rows.fields" 
+    [config]=field  
+    [group]="group" 
+    >
+    </app-control>
   </div>
   `,
   styleUrls: ['./row.component.css']
 })
 export class RowComponent implements OnInit {
-    @Input('fields') fields:any;
+    @Input('rows') rows:any;
     @Input('group') group:FormGroup;
 
   constructor() { }
