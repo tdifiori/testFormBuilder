@@ -6,8 +6,8 @@ import { FormGroup } from '@angular/forms';
   template: `
   <div class="row">
     <app-control *ngFor="let field of rows.fields" 
-    [field]=field  
-    [group]="group" 
+      [field]="field"  
+      [group]="group" 
     >
     </app-control>
   </div>
