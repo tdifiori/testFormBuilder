@@ -7,20 +7,20 @@ import { controlsProps, inputConf } from '../../../interface/control';
   selector: 'app-input-text',
  template: `
  <div class="col" [formGroup]="group">
-  <label >{{field.label}}</label> 
+  <label >{{config.label}}</label> 
     <input 
       [ngClass]= "{
-        'is-invalid': group.controls[field.key].status === 'INVALID',
-        'is-valid': group.controls[field.key].status === 'VALID'
+        'is-invalid': group.controls[config.key].status === 'INVALID',
+        'is-valid': group.controls[config.key].status === 'VALID'
       }"
-      formControlName="{{field.key}}"  
-      type="{{field.type}}" 
-      name="{{field.key}}"  
+      formControlName="{{config.key}}"  
+      type="{{config.type}}" 
+      name="{{config.key}}"  
       class="form-control form-control-sm" 
-      placeholder="{{field.label}}" 
+      placeholder="{{config.label}}" 
     >   
       <div class="row" style="font-size:0.6em;">
-        <div  *ngFor="let rule of field.rules" >
+        <div  *ngFor="let rule of config.rules" >
           {{rule.type + "("+ rule.value+")  ,  " }}
         </div>
       </div>

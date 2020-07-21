@@ -1,13 +1,13 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { FormGroup } from "@angular/forms";
 import { components } from "./hash-map-component";
+import { inputConf } from '../../interface/control';
 
-//import inputConfig from '../../mock/formconfig'
 
 @Component({
   selector: "app-control",
   template: `
-  <ng-container *ngFor="let field of fields;" 
+  <ng-container *ngFor="let field of config;" 
      dynamicControl 
   >
   </ng-container> 
@@ -15,8 +15,9 @@ import { components } from "./hash-map-component";
   styleUrls: ["./control.component.css"]
 })
 export class ControlComponent implements OnInit {
-  @Input("field") fields: any;
-  @Input("group") group: FormGroup;
+
+  @Input('config') config: inputConf;
+  @Input('group') group: FormGroup;
 
   constructor() {}
 

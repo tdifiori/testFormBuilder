@@ -9,12 +9,12 @@ import { controlsProps, inputConf } from '../../../interface/control';
    <label class="form-check-label">
         <input class="form-check-input" 
 
-          formControlName="{{field.key}}" 
-          type="{{field.type}}" 
-          name="{{field.key}}"
-          value="{{field.value}}" 
+          formControlName="{{config.key}}" 
+          type="{{config.type}}" 
+          name="{{config.key}}"
+          value="{{config.value}}" 
         >
-        {{field.label}}</label>
+        {{config.label}}</label>
 </div>        
         `,
   styleUrls: ['./input-radio.component.css']

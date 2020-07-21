@@ -10,7 +10,7 @@ export interface inputConf{
     type: string;
     key: string;
     defaultValue: string;
-   // value: string;
+    value: string;
     rules: [];
     options: [];
 }
