@@ -6,7 +6,7 @@ import { FormGroup } from '@angular/forms';
   template: `
   <div class="row">
     <app-control *ngFor="let field of rows.fields" 
-    [config]=field  
+    [field]=field  
     [group]="group" 
     >
     </app-control>
@@ -22,6 +22,7 @@ export class RowComponent implements OnInit {
 
 
   ngOnInit() {
+   
   }
 
 }

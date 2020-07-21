@@ -17,10 +17,12 @@ import { inputConf } from '../../interface/control';
   styleUrls: ["./control.component.css"]
 })
 export class ControlComponent implements OnInit {
-  @Input('config') config: inputConf;
+  @Input('field') config: any;
   @Input('group') group: FormGroup;
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log("mi torna questo: ");
+  }
 }
