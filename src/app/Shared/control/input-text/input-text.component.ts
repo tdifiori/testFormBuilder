@@ -29,9 +29,9 @@ import { controlsProps, inputConf } from '../../../interface/control';
   styleUrls: ['./input-text.component.css']
 })
 export class InputTextComponent implements controlsProps {
+  @Input('config') config: inputConf;
+  @Input('group') group: FormGroup;
 
-config:inputConf;
-group:FormGroup;
 
   constructor() { }
 

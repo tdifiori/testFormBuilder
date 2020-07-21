@@ -20,9 +20,8 @@ import { controlsProps, inputConf } from '../../../interface/control';
   styleUrls: ['./input-radio.component.css']
 })
 export class InputRadioComponent implements controlsProps {
-
-config: inputConf;
-group: FormGroup;
+  @Input('config') config: inputConf;
+  @Input('group') group: FormGroup;
 
   constructor() { }
 

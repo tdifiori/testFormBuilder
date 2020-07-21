@@ -1,4 +1,4 @@
-import { controls } from '../../interface/control';
+import { controlsProps } from '../../interface/control';
 
 import { InputTextComponent } from './input-text/input-text.component';
 import { InputSelectComponent } from './input-select/input-select.component';
@@ -7,7 +7,7 @@ import { Type } from '@angular/core';
 
 
 
-export const  components: {[ type: string ]: Type<controls> } = {
+export const  components: {[ type: string ]: Type<controlsProps> } = {
   text: InputTextComponent,
   select: InputSelectComponent,
   radio: InputRadioComponent

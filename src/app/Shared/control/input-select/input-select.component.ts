@@ -31,9 +31,8 @@ import { controlsProps, inputConf } from '../../../interface/control';
   styleUrls: ['./input-select.component.css']
 })
 export class InputSelectComponent implements controlsProps {
-
-config: inputConf;
-group: FormGroup;
+  @Input('config') config: inputConf;
+  @Input('group') group: FormGroup;
 
 
   constructor() { }
