@@ -11,7 +11,7 @@ import { FormGroup } from '@angular/forms';
       <div class="card-body">
         <div class="container">
             <app-row *ngFor="let rows of section.rows" 
-              [rows] = rows.fields  
+              [rows] = rows  
               [group]="group" 
             >
             </app-row>
