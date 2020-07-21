@@ -1,16 +1,16 @@
 import { FormGroup } from "@angular/forms";
 
-export interface controls {
-  fieldConfig: field;
+export interface controlsProps {
+  config: inputConf;
   group: FormGroup;
 }
 
-export interface field{ 
+export interface inputConf{ 
     label: string;
     type: string;
     key: string;
     defaultValue: string;
-    value: string;
+   // value: string;
     rules: [];
     options: [];
 }

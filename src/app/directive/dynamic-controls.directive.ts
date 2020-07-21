@@ -1,9 +1,14 @@
-import { Directive,OnInit } from '@angular/core';
+import { Directive,OnInit, Input } from '@angular/core';
+
 
 @Directive({
   selector: '[dynamicControl]',
 })
 export class DynamicControlDirective implements OnInit{
+
+
+
+
   constructor() { }
 
 

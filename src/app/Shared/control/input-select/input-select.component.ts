@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { controls } from '../../../interface/control';
+import { controlsProps, inputConf } from '../../../interface/control';
 
 
 
@@ -30,10 +30,10 @@ import { controls } from '../../../interface/control';
           `,
   styleUrls: ['./input-select.component.css']
 })
-export class InputSelectComponent implements controls {
+export class InputSelectComponent implements controlsProps {
 
-fieldConfig:any;
-group:FormGroup;
+config: inputConf;
+group: FormGroup;
 
 
   constructor() { }

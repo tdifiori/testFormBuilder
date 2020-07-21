@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { controls } from '../../../interface/control';
+import { controlsProps, inputConf } from '../../../interface/control';
 
 
 @Component({
@@ -28,9 +28,9 @@ import { controls } from '../../../interface/control';
  `,
   styleUrls: ['./input-text.component.css']
 })
-export class InputTextComponent implements controls {
+export class InputTextComponent implements controlsProps {
 
-fieldConfig:any;
+config:inputConf;
 group:FormGroup;
 
   constructor() { }

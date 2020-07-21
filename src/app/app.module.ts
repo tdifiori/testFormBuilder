@@ -7,18 +7,20 @@ import { ReactiveFormsModule, FormsModule  } from '@angular/forms';
 
 import { SectionComponent } from './Shared/section/section.component';
 import { RowComponent } from './Shared/row/row.component';
-import { ControlInlinTemplateComponent } from './Shared/control/control.component';
+import { ControlComponent } from './Shared/control/control.component';
 import { InputTextComponent } from './Shared/control/input-text/input-text.component';
 import { InputSelectComponent } from './Shared/control/input-select/input-select.component';
 import { InputRadioComponent } from './Shared/control/input-radio/input-radio.component';
 
+
+//import { DynamicControlDirective } from './directive/dynamic-controls.directive';
 
 @NgModule({
   declarations: [
     SectionComponent,
     AppComponent,
     RowComponent,
-    ControlInlinTemplateComponent,
+    ControlComponent,
     InputTextComponent,
     InputSelectComponent,
     InputRadioComponent

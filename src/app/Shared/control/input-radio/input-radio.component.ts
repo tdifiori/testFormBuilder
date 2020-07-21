@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { controls } from '../../../interface/control';
+import { controlsProps, inputConf } from '../../../interface/control';
 
 @Component({
   selector: 'app-input-radio',
@@ -19,10 +19,10 @@ import { controls } from '../../../interface/control';
         `,
   styleUrls: ['./input-radio.component.css']
 })
-export class InputRadioComponent implements controls {
+export class InputRadioComponent implements controlsProps {
 
-fieldConfig:any;
-group:FormGroup;
+config: inputConf;
+group: FormGroup;
 
   constructor() { }
 
