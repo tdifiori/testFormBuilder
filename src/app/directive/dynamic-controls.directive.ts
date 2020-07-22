@@ -31,7 +31,7 @@ ngOnInit(){
 
 
 
-  console.log("mi torna questo: ",this.config.type);
+  console.log("sono nella directive ",this.config);
 }
 
 
