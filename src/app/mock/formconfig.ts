@@ -33,7 +33,7 @@
             {
               "label": "Data",
               "type": "text",
-              "key": "data",
+              "key": "datanascita",
               "defaultValue":"",
               "rules":[
                 {'type':"required"},

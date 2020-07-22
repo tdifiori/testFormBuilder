@@ -12,5 +12,5 @@ export const  components: {[ type: string ]: Type<controlsProps> } = {
   text: InputTextComponent,
   select: InputSelectComponent,
   radio: InputRadioComponent,
-  data: InputDataComponent
+  date: InputDataComponent
 };
