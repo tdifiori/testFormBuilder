@@ -15,7 +15,7 @@ export class DynamicControlDirective implements OnInit{
 
 
 ngOnInit(){
-  console.log("mi torna questo: ");
+  console.log("mi torna questo: ",this.config);
 }
 
 
