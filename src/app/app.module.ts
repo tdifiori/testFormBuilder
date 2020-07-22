@@ -11,10 +11,11 @@ import { ControlComponent } from './Shared/control/control.component';
 import { InputTextComponent } from './Shared/control/input-text/input-text.component';
 import { InputSelectComponent } from './Shared/control/input-select/input-select.component';
 import { InputRadioComponent } from './Shared/control/input-radio/input-radio.component';
+import { InputDataComponent } from './Shared/control/input-data/input-data.component';
 
 
 import { DynamicControlDirective } from './directive/dynamic-controls.directive';
-import { InputDataComponent } from './Shared/control/input-data/input-data.component';
+
 
 @NgModule({
   declarations: [

@@ -27,7 +27,7 @@ ngOnInit(){
     );
     this.component = this.container.createComponent(factory);
     this.component.instance.config = this.config;
-    this.component.instance.group = this.group; */
+    this.component.instance.group = this.group;  */
 
 
 
