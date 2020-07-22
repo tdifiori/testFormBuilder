@@ -21,17 +21,17 @@ export class DynamicControlDirective implements OnInit{
 
 
 ngOnInit(){
-   const factory = 
+/*    const factory = 
     this.resolver.resolveComponentFactory<controlsProps>(
       components[this.config.type]
     );
     this.component = this.container.createComponent(factory);
     this.component.instance.config = this.config;
-    this.component.instance.group = this.group;
+    this.component.instance.group = this.group; */
 
 
 
-  console.log("mi torna questo: ",this.config);
+  console.log("mi torna questo: ",this.config.type);
 }
 
 
