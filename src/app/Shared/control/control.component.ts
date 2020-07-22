@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { FormGroup } from "@angular/forms";
-//import { components } from "./hash-map-component";
 import { inputConf } from '../../interface/control';
 
 
@@ -25,6 +24,6 @@ export class ControlComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.config);
+    
   }
 }
