@@ -10,8 +10,8 @@ import { FormGroup } from '@angular/forms';
     <div class="card-header bg-info" >{{section.title}}</div> 
       <div class="card-body">
         <div class="container">
-            <app-row *ngFor="let rows of section.rows" 
-              [rows] = rows  
+            <app-row *ngFor="let row of section.rows" 
+              [row] = row  
               [group]="group" 
             >
             </app-row>

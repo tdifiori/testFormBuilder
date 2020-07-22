@@ -7,9 +7,9 @@ import { inputConf } from '../../interface/control';
 @Component({
   selector: "app-control",
   template: `
-  <ng-container *ngFor="let field of config.fields" 
+  <ng-container 
      dynamicControl 
-     [config]="field"
+     [config]="config"
      [group]="group"
   >
   </ng-container>

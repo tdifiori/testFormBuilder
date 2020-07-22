@@ -5,8 +5,8 @@ import { FormGroup } from '@angular/forms';
   selector: 'app-row',
   template: `
   <div class="row">
-    <app-control 
-      [field]="rows"  
+    <app-control *ngFor="let field of row.fields" 
+      [field]="field"  
       [group]="group" 
     >
     </app-control>
@@ -15,7 +15,7 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./row.component.css']
 })
 export class RowComponent implements OnInit {
-    @Input('rows') rows:any;
+    @Input('row') row:any;
     @Input('group') group:FormGroup;
 
   constructor() { }
