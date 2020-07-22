@@ -1,6 +1,6 @@
 
  const formConfig = {
-  "title": "(dev) Domanda dipartecipazione",
+  "title": "(dev) Form builder test",
   "description": "Eventuale descrizione della form",
   "sections": [
     {
@@ -57,14 +57,14 @@
       ]  
     },
     {
-      "title": "Dichiarazioni",
+      "title": "Descrizione",
       "rows": [
         {
           "fields": [
             {
-              "label": "Dichiarazione 1",
+              "label": "Descrizione 1",
               "type": "text",
-              "key": "dichiarazione1",
+              "key": "Descrizione1",
               "defaultValue":"",
               "rules":[
                 {'type':"required"},
@@ -87,9 +87,9 @@
         {
           "fields": [
             {
-              "label": "Dichiarazione 2",
+              "label": "Descrizione 2",
               "type": "text",
-              "key": "dichiarazione2",
+              "key": "Descrizione2",
               "defaultValue":"",
               "rules":[
                 {'type':"required"},
