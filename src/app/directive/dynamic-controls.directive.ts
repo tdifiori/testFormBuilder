@@ -27,10 +27,6 @@ ngOnInit(){
     this.component = this.container.createComponent(factory);
     this.component.instance.config = this.config;
     this.component.instance.group = this.group;    
-
-console.log("sono nella components ",components[this.config.type]);
-
-  //console.log("sono nella directive ",this.config);
 }
 
 
