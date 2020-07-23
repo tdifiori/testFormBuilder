@@ -6,11 +6,11 @@ export interface controlsProps {
 }
 
 export interface inputConf{ 
-    label?: string;
-    type?: string;
-    key?: string;
-    defaultValue?: string;
-    value?: string;
-    rules?: [];
-    options?: [];
+    label: string;
+    type: string;
+    key: string;
+    defaultValue: string;
+    value: string;
+    rules: [];
+    options: [];
 }

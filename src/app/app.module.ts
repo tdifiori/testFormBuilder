@@ -35,6 +35,12 @@ import { DynamicControlDirective } from './directive/dynamic-controls.directive'
     ReactiveFormsModule,
     FormsModule
   ],
+  entryComponents: [
+    InputTextComponent,
+    InputSelectComponent,
+    InputRadioComponent,
+    InputDataComponent
+],
   providers: [],
   bootstrap: [AppComponent]
 })

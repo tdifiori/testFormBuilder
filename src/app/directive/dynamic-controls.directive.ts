@@ -21,17 +21,16 @@ export class DynamicControlDirective implements OnInit{
 
 
 ngOnInit(){
-/*    const factory = 
-    this.resolver.resolveComponentFactory<controlsProps>(
+   const factory = this.resolver.resolveComponentFactory<controlsProps>(
       components[this.config.type]
     );
     this.component = this.container.createComponent(factory);
     this.component.instance.config = this.config;
-    this.component.instance.group = this.group;  */
+    this.component.instance.group = this.group;    
 
+console.log("sono nella components ",components[this.config.type]);
 
-
-  console.log("sono nella directive ",this.config);
+  //console.log("sono nella directive ",this.config);
 }
 
 
