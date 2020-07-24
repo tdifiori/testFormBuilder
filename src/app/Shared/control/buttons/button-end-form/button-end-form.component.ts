@@ -12,6 +12,7 @@ import { controlsProps, inputConf } from '../../../../interface/control';
       type="{{config.type}}"  
       class="btn btn-primary"
       name="{{config.key}}"
+       
     >Invia
     </button> 
 
@@ -34,8 +35,6 @@ export class ButtonEndFormComponent implements controlsProps {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.config.type);
-
   }
 
 }

@@ -178,7 +178,6 @@
               "value": "invia",
               "defaultValue": "",
                "rules":[
-                {'type':"invalid"}
               ]
             }
           ]
