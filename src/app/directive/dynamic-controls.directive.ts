@@ -8,9 +8,11 @@ import { components } from "../Shared/control/hash-map-component";
   selector: '[dynamicControl]',
 })
 export class DynamicControlDirective implements OnInit{
+  //recupero la porzione di json config, e il formgroup
   @Input('config') config: inputConf;
   @Input('group') group: FormGroup;
 
+  //creo una variabile di tipo component 
   component: ComponentRef<controlsProps>;
 
   constructor(
@@ -21,9 +23,12 @@ export class DynamicControlDirective implements OnInit{
 
 
 ngOnInit(){
+    //instanzio il component scelto dall hashmap passandolo a factory
    const factory = this.resolver.resolveComponentFactory<controlsProps>(
       components[this.config.type]
     );
+    // creo il component passando factory, e subito dopo gli passo la
+    //config, e il froup di appartenenza.
     this.component = this.container.createComponent(factory);
     this.component.instance.config = this.config;
     this.component.instance.group = this.group;   
