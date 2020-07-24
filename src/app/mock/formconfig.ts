@@ -175,7 +175,11 @@
             {
               "type": "submit",
               "key": "submit",
-              "value": "invia"
+              "value": "invia",
+              "defaultValue": "",
+               "rules":[
+                {'type':"invalid"}
+              ]
             }
           ]
         }

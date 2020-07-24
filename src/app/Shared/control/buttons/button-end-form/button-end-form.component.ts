@@ -6,16 +6,23 @@ import { controlsProps, inputConf } from '../../../../interface/control';
 @Component({
   selector: 'app-button-end-form',
   template: `
-  <div class="col" [formGroup]="group">
+  <div class="col" [formGroup]="group" >
     <button 
       [disabled]="group.invalid" 
       type="{{config.type}}"  
       class="btn btn-primary"
-      formControlName="{{config.key}}"
+      name="{{config.key}}"
     >Invia
     </button> 
 
-   form status: {{ group.status }}
+   Status: {{ group.status }}
+
+    <div class="row mt-3">
+      <div class="alert alert-success" role="alert">
+        form value: <pre><code>{{ group.value | json }}</code></pre>
+      </div>
+    </div>
+
   </div>    
   `,
   styleUrls: ['./button-end-form.component.css']
@@ -27,6 +34,8 @@ export class ButtonEndFormComponent implements controlsProps {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.config.type);
+
   }
 
 }

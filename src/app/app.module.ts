@@ -41,7 +41,8 @@ import { ButtonEndFormComponent } from './Shared/control/buttons/button-end-form
     InputTextComponent,
     InputSelectComponent,
     InputRadioComponent,
-    InputDataComponent
+    InputDataComponent,
+    ButtonEndFormComponent
 ],
   providers: [],
   bootstrap: [AppComponent]
