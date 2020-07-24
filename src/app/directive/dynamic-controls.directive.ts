@@ -1,6 +1,7 @@
 import { Directive,OnInit, Input, ComponentFactoryResolver,ViewContainerRef, ComponentRef } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { controlsProps, inputConf } from '../interface/control';
+// importo l hashMap dei componenti...
 import { components } from "../Shared/control/hash-map-component";
 
 
