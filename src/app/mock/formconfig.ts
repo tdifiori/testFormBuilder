@@ -166,8 +166,23 @@
           ]
         }
       ]  
+    },
+    {
+      "title": "Form status",
+      "rows": [
+        {
+          "fields": [
+            {
+              "type": "button",
+              "key": "button",
+              "value": "invia"
+            }
+          ]
+        }
+      ]  
     }
   ],
+   
   "awards": []
 }
 
