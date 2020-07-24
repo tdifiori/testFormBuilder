@@ -2,6 +2,11 @@ import { Component, OnInit, Input } from "@angular/core";
 import { FormGroup } from "@angular/forms";
 import { inputConf } from '../../interface/control';
 
+import { InputTextComponent } from './input-text/input-text.component';
+import { InputSelectComponent } from './input-select/input-select.component';
+import { InputRadioComponent } from './input-radio/input-radio.component';
+import { InputDataComponent } from './input-data/input-data.component';
+import { ButtonEndFormComponent } from './buttons/button-end-form/button-end-form.component';
 
 @Component({
   selector: "app-control",
@@ -13,10 +18,17 @@ import { inputConf } from '../../interface/control';
   >
   </ng-container>
   `,
-  styleUrls: ["./control.component.css"]
+  styleUrls: ["./control.component.css"],
+  entryComponents: [
+    InputTextComponent,
+    InputSelectComponent,
+    InputRadioComponent,
+    InputDataComponent,
+    ButtonEndFormComponent
+]
 })
 export class ControlComponent implements OnInit {
-  @Input('field') config: any;
+  @Input('field') config: inputConf;
   @Input('group') group: FormGroup;
 
   constructor() {

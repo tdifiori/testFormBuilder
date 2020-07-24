@@ -12,10 +12,10 @@ import { InputTextComponent } from './Shared/control/input-text/input-text.compo
 import { InputSelectComponent } from './Shared/control/input-select/input-select.component';
 import { InputRadioComponent } from './Shared/control/input-radio/input-radio.component';
 import { InputDataComponent } from './Shared/control/input-data/input-data.component';
-
+import { ButtonEndFormComponent } from './Shared/control/buttons/button-end-form/button-end-form.component';
 
 import { DynamicControlDirective } from './directive/dynamic-controls.directive';
-import { ButtonEndFormComponent } from './Shared/control/buttons/button-end-form/button-end-form.component';
+
 
 
 @NgModule({
@@ -37,13 +37,7 @@ import { ButtonEndFormComponent } from './Shared/control/buttons/button-end-form
     ReactiveFormsModule,
     FormsModule
   ],
-  entryComponents: [
-    InputTextComponent,
-    InputSelectComponent,
-    InputRadioComponent,
-    InputDataComponent,
-    ButtonEndFormComponent
-],
+
   providers: [],
   bootstrap: [AppComponent]
 })
