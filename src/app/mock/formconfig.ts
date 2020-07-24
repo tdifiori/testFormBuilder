@@ -173,8 +173,8 @@
         {
           "fields": [
             {
-              "type": "button",
-              "key": "button",
+              "type": "submit",
+              "key": "submit",
               "value": "invia"
             }
           ]

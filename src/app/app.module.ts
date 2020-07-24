@@ -15,6 +15,7 @@ import { InputDataComponent } from './Shared/control/input-data/input-data.compo
 
 
 import { DynamicControlDirective } from './directive/dynamic-controls.directive';
+import { ButtonEndFormComponent } from './Shared/control/buttons/button-end-form/button-end-form.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { DynamicControlDirective } from './directive/dynamic-controls.directive'
     InputSelectComponent,
     InputRadioComponent,
     DynamicControlDirective,
-    InputDataComponent
+    InputDataComponent,
+    ButtonEndFormComponent
   ],
   imports: [
     BrowserModule,

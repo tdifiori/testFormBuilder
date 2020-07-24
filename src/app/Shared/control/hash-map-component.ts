@@ -5,6 +5,7 @@ import { InputSelectComponent } from './input-select/input-select.component';
 import { InputRadioComponent } from './input-radio/input-radio.component';
 import { InputDataComponent } from './input-data/input-data.component';
 import { Type } from '@angular/core';
+import { ButtonEndFormComponent } from './buttons/button-end-form/button-end-form.component';
 
 
 
@@ -12,5 +13,6 @@ export const  components: {[ type: string ]: Type<controlsProps> } = {
   text: InputTextComponent,
   select: InputSelectComponent,
   radio: InputRadioComponent,
-  date: InputDataComponent
+  date: InputDataComponent,
+  submit: ButtonEndFormComponent
 };
