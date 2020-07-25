@@ -162,6 +162,15 @@
               "rules":[
                 {'type':"required"}
               ]
+            },
+                        {
+              "label": "Carica file",
+              "type": "file",
+              "key": "file",
+              "defaultValue":"",
+              "rules":[
+                {'type':"required"}
+              ]
             }
           ]
         }
