@@ -6,6 +6,7 @@ import { InputRadioComponent } from './input-radio/input-radio.component';
 import { InputDataComponent } from './input-data/input-data.component';
 import { Type } from '@angular/core';
 import { ButtonEndFormComponent } from './buttons/button-end-form/button-end-form.component';
+import { InputFileComponent } from './input-file/input-file.component';
 
 
 
@@ -14,5 +15,6 @@ export const  components: {[ type: string ]: Type<controlsProps> } = {
   select: InputSelectComponent,
   radio: InputRadioComponent,
   date: InputDataComponent,
-  submit: ButtonEndFormComponent
+  submit: ButtonEndFormComponent,
+  file: InputFileComponent
 };

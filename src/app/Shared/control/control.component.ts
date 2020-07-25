@@ -7,6 +7,7 @@ import { InputSelectComponent } from './input-select/input-select.component';
 import { InputRadioComponent } from './input-radio/input-radio.component';
 import { InputDataComponent } from './input-data/input-data.component';
 import { ButtonEndFormComponent } from './buttons/button-end-form/button-end-form.component';
+import { InputFileComponent } from './input-file/input-file.component';
 
 @Component({
   selector: "app-control",
@@ -24,7 +25,8 @@ import { ButtonEndFormComponent } from './buttons/button-end-form/button-end-for
     InputSelectComponent,
     InputRadioComponent,
     InputDataComponent,
-    ButtonEndFormComponent
+    ButtonEndFormComponent,
+    InputFileComponent
 ]
 })
 export class ControlComponent implements OnInit {

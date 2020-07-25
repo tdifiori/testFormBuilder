@@ -15,6 +15,7 @@ import { InputDataComponent } from './Shared/control/input-data/input-data.compo
 import { ButtonEndFormComponent } from './Shared/control/buttons/button-end-form/button-end-form.component';
 
 import { DynamicControlDirective } from './directive/dynamic-controls.directive';
+import { InputFileComponent } from './Shared/control/input-file/input-file.component';
 
 
 
@@ -29,7 +30,8 @@ import { DynamicControlDirective } from './directive/dynamic-controls.directive'
     InputRadioComponent,
     DynamicControlDirective,
     InputDataComponent,
-    ButtonEndFormComponent
+    ButtonEndFormComponent,
+    InputFileComponent
   ],
   imports: [
     BrowserModule,
