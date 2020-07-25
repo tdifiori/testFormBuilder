@@ -6,8 +6,12 @@ import { controlsProps, inputConf } from '../../../interface/control';
   selector: 'app-input-file',
   template: `
   <div class="col" [formGroup]="group">
-    <label >{{config.label}}</label> 
+    <label>{{config.label}}</label> 
     <input 
+    [ngClass]= "{
+      'btn-danger': group.controls[config.key].status === 'INVALID',
+      'btn-success': group.controls[config.key].status === 'VALID'
+    }"
     type="{{config.type}}"
     class="form-control-file" 
     formControlName="{{config.key}}" 
