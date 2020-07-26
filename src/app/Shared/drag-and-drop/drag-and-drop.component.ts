@@ -15,6 +15,7 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
           <div class="col-sm" *ngFor = "let field of row.fields; let i = index">
             <span 
               class="badge badge-info"
+              cdkDrag
             >{{field.key}}
             </span>
           </div>
