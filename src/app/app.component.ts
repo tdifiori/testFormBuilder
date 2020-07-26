@@ -9,11 +9,14 @@ import { Router } from '@angular/router'
   selector: 'app-root',
   template: `
   <div class="container">
+  <app-form-maker></app-form-maker>
+
+<hr>
     <div class="alert alert-primary text-center" role="alert">
         <button 
           type="button"  
-          class="btn btn-primary btn-sm" 
-          [routerLink]="['./modificaform']"
+          class="btn btn-primary btn-sm"
+          (click)="router.navigate(['/modificaform']);"
           >Modifica
         </button> 
       {{formConfig.title}}
@@ -42,7 +45,10 @@ export class AppComponent implements OnInit {
   validators = [];
   
 
-  constructor(private fb: FormBuilder) { 
+  constructor(
+    private fb: FormBuilder,
+    private router: Router
+  ) { 
     this.formConfig = fConfig;  
   }
 

@@ -5,10 +5,28 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 @Component({
   selector: 'app-drag-and-drop',
   template: `
-  <div class="card" *ngFor="let section of config; let i=index">
+  <div class="card mb-2" *ngFor = "let section of config.sections; let i = index">{{section.title}}
     <div class="card-body">
-    
-      <span class="badge badge-info">Info</span>
+
+      <div class="container">
+        <div class="row  border border-success border-dotted  mb-1"  
+        *ngFor = "let row of section.rows; let i = index">
+
+          <div class="col-sm" *ngFor = "let field of row.fields; let i = index">
+            <span 
+              class="badge badge-info"
+            >{{field.key}}
+            </span>
+          </div>
+
+        </div>
+        
+      </div>
+
+
+
+
+
 
     </div>
   </div>
@@ -23,6 +41,7 @@ export class DragAndDropComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log(this.config.sections);
   }
 
 }
