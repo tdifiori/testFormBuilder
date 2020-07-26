@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import fConfig from './mock/formconfig'
 import { FormBuilder, FormGroup, Validators, FormControl, ValidatorFn} from '@angular/forms';
+import { Router } from '@angular/router'
 
 
 
@@ -9,7 +10,12 @@ import { FormBuilder, FormGroup, Validators, FormControl, ValidatorFn} from '@an
   template: `
   <div class="container">
     <div class="alert alert-primary text-center" role="alert">
-                    <button type="button"  class="btn btn-primary btn-sm" >Modifica</button> 
+        <button 
+          type="button"  
+          class="btn btn-primary btn-sm" 
+          [routerLink]="['./modificaform']"
+          >Modifica
+        </button> 
       {{formConfig.title}}
     </div>
       <hr>
