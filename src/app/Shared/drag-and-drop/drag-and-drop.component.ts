@@ -9,15 +9,24 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
     <div class="card-body">
 
       <div class="container">
-        <div class="row  border border-success border-dotted  mb-1"  
-        *ngFor = "let row of section.rows; let i = index">
 
-          <div class="col-sm" *ngFor = "let field of row.fields; let i = index">
+        <div class="row  border border-success border-dotted  mb-1"  
+        *ngFor = "let row of section.rows; let i = index"
+        cdkDropList
+        #personList = "cdkDropList"
+        [cdkDropListData] = row.fields
+        [cdkDropListConnectedTo] = "[userlist]"
+        (cdkDropListDropped) = "onDrop($event)" 
+        >
+
+          <div class="col-sm" *ngFor = "let field of row.fields; let i = index"
+          >
             <span 
               class="badge badge-info"
               cdkDrag
             >{{field.key}}
             </span>
+{{field.key}}
           </div>
 
         </div>
@@ -42,7 +51,19 @@ export class DragAndDropComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.config.sections);
+    console.log(this.config);
   }
+
+  onDrop(event: CdkDragDrop<string[]>) {
+      if (event.previousContainer === event.container) {
+         moveItemInArray(event.container.data, 
+            event.previousIndex, event.currentIndex);
+      } else {
+         transferArrayItem(event.previousContainer.data,
+         event.container.data,
+         event.previousIndex,
+         event.currentIndex);
+      }
+   }
 
 }
