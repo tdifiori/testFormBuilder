@@ -1,13 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import fConfig from '../../mock/formconfig';
+
 
 @Component({
   selector: 'app-form-maker',
-  template: ``,
+  template: `
+  <app-drag-and-drop
+  [config]="config"
+  >
+  </app-drag-and-drop>`,
   styleUrls: ['./form-maker.component.css']
 })
 export class FormMakerComponent implements OnInit {
+  config:any;
 
-  constructor() { }
+  constructor() { 
+    this.config = fConfig;
+  }
 
   ngOnInit() {
   }
