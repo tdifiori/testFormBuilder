@@ -40,6 +40,7 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 
     </div>
   </div>
+  <button type="button"  (click)="update()" class="btn btn-primary btn-sm" >Update</button> 
   `,
   styleUrls: ['./drag-and-drop.component.css']
 })
@@ -64,6 +65,12 @@ export class DragAndDropComponent implements OnInit {
          event.previousIndex,
          event.currentIndex);
       }
+   }
+
+
+
+   update(){
+     console.log(this.config.sections);
    }
 
 }
