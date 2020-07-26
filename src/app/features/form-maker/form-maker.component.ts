@@ -12,6 +12,7 @@ import fConfig from '../../mock/formconfig';
   styleUrls: ['./form-maker.component.css']
 })
 export class FormMakerComponent implements OnInit {
+  
   config:any;
 
   constructor() { 

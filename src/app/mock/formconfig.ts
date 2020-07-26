@@ -1,6 +1,6 @@
 
  const formConfig = {
-  "i":10,
+  "id":10,
   "title": "(dev) Form builder test",
   "description": "Eventuale descrizione della form",
   "sections": [

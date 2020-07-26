@@ -10,7 +10,7 @@ import { controlsProps, inputConf } from '../../../../interface/control';
     <button 
       [disabled]="group.invalid" 
       type="{{config.type}}"  
-      class="btn btn-primary"
+      class="btn btn-primary btn-sm"
       name="{{config.key}}"
        
     >Invia

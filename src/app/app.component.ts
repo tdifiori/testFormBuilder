@@ -8,17 +8,20 @@ import { FormBuilder, FormGroup, Validators, FormControl, ValidatorFn} from '@an
   selector: 'app-root',
   template: `
   <div class="container">
-    <div class="alert alert-primary text-center" role="alert">{{formConfig.title}}</div>
+    <div class="alert alert-primary text-center" role="alert">
+                    <button type="button"  class="btn btn-primary btn-sm" >Modifica</button> 
+      {{formConfig.title}}
+    </div>
       <hr>
-        <form  [formGroup]="reactiveForm" (ngSubmit)="submitForm()" >
+        <form  [formGroup]="reactiveForm" (ngSubmit)="submitForm()">
           <div class="form-group">
 
             <app-section *ngFor="let section of formConfig.sections"        [section]="section" 
               [group]="reactiveForm" 
             >
             </app-section>
-                  <hr>
-                    <button type="button"  (click)="reset()" class="btn btn-primary" >Reset</button> 
+              <hr>
+                <button type="button"  (click)="reset()" class="btn btn-primary btn-sm" >Reset</button> 
           </div>
         </form>
         
