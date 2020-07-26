@@ -12,10 +12,13 @@ import { InputTextComponent } from './Shared/control/input-text/input-text.compo
 import { InputSelectComponent } from './Shared/control/input-select/input-select.component';
 import { InputRadioComponent } from './Shared/control/input-radio/input-radio.component';
 import { InputDataComponent } from './Shared/control/input-data/input-data.component';
+import { InputFileComponent } from './Shared/control/input-file/input-file.component';
 import { ButtonEndFormComponent } from './Shared/control/buttons/button-end-form/button-end-form.component';
 
 import { DynamicControlDirective } from './directive/dynamic-controls.directive';
-import { InputFileComponent } from './Shared/control/input-file/input-file.component';
+import { DragDropModule } from '@angular/cdk/drag-drop'
+
+
 
 
 
@@ -37,7 +40,8 @@ import { InputFileComponent } from './Shared/control/input-file/input-file.compo
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    DragDropModule
   ],
 
   providers: [],
