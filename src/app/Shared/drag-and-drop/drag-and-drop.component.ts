@@ -19,18 +19,20 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
         (cdkDropListDropped) = "onDrop($event)" 
         >
 
-          <div class="col-sm" *ngFor = "let field of row.fields; let i = index"
-          >
+          <div class="col-sm" *ngFor = "let field of row.fields; let i = index">
             <span 
               class="badge badge-info"
               cdkDrag
             >{{field.key}}
             </span>
           </div>
- <a (click)="info(row.fields)" class="badge badge-success mr-1 mt-1 mb-1">+</a>
 
-
-
+            <a 
+            (click)="info(row.fields)" 
+            class="badge badge-success mr-1 mt-1 mb-1"
+            data-toggle="modal" 
+            data-target="#exampleModal"
+            >+</a>
 
         </div>
       
@@ -39,6 +41,34 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
     </div>
   </div>
   <button type="button"  (click)="update()" class="btn btn-primary btn-sm" >Update</button> 
+
+
+
+<!-- modal ------------ -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
   `,
   styleUrls: ['./drag-and-drop.component.css']
 })
