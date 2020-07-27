@@ -26,17 +26,15 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
               cdkDrag
             >{{field.key}}
             </span>
-{{field.key}}
           </div>
+ <a (click)="info(row.fields)" class="badge badge-success mr-1 mt-1 mb-1">+</a>
+
+
+
 
         </div>
-        
+      
       </div>
-
-
-
-
-
 
     </div>
   </div>
@@ -67,7 +65,22 @@ export class DragAndDropComponent implements OnInit {
       }
    }
 
-
+   info(field){
+     var obj = 
+      {
+        "label": "codice fiscale",
+        "type": "text",
+        "key": "codfiscale",
+        "defaultValue":"",
+        "rules":[
+          {'type':"required"},
+          {'type':"minLength",'value':16}
+        ]
+      }
+     ;
+field.push(obj);
+     console.log(field);
+   }
 
    update(){
      console.log(this.config.sections);

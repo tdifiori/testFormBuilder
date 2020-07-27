@@ -18,7 +18,8 @@ import { ButtonEndFormComponent } from './Shared/control/buttons/button-end-form
 import { DynamicControlDirective } from './directive/dynamic-controls.directive';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { FormMakerComponent } from './features/form-maker/form-maker.component';
-import { DragAndDropComponent } from './Shared/drag-and-drop/drag-and-drop.component'
+import { DragAndDropComponent } from './Shared/drag-and-drop/drag-and-drop.component';
+import { MenuControlsComponent } from './features/menu-controls/menu-controls.component'
 
 
 
@@ -38,7 +39,8 @@ import { DragAndDropComponent } from './Shared/drag-and-drop/drag-and-drop.compo
     ButtonEndFormComponent,
     InputFileComponent,
     FormMakerComponent,
-    DragAndDropComponent
+    DragAndDropComponent,
+    MenuControlsComponent
   ],
   imports: [
     BrowserModule,
