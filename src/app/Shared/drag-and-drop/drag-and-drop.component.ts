@@ -28,13 +28,11 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
           </div>
 
             <a 
-            (click)="info(row.fields)" 
+            (click)="info(row.fields,i)" 
             class="badge badge-success mr-1 mt-1 mb-1"
 
             >+</a>
-<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
+
         </div>
       
       </div>
@@ -76,11 +74,15 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 export class DragAndDropComponent implements OnInit {
 
 
+
   @Input('config') config:any
 
-  constructor() { }
+  constructor() {
+   
+   }
 
   ngOnInit() {
+    
     console.log(this.config);
   }
 
@@ -96,7 +98,8 @@ export class DragAndDropComponent implements OnInit {
       }
    }
 
-   info(field){
+   info(field,index){
+
      var obj = 
       {
         "label": "codice fiscale",
