@@ -26,15 +26,15 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
               class="badge badge-info"
               cdkDrag
             >{{field.key}}
-            </span>
-            <span 
+             <span 
               class="badge badge-danger"
               cdkDrag
               (click)="delete(row.fields,i)"
             >X
             </span>
+            </span>
+           
           </div>
-
             <a 
             (click)="info(row.fields,i)" 
             class="badge badge-success mr-1 mt-1 mb-1"
