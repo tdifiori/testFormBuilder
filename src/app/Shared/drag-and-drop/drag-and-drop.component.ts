@@ -28,6 +28,12 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
               cdkDrag
             >{{field.key}}
             </span>
+            <span 
+              class="badge badge-danger"
+              cdkDrag
+              (click)="delete(row.fields,i)"
+            >X
+            </span>
           </div>
 
             <a 
@@ -87,9 +93,14 @@ export class DragAndDropComponent implements OnInit {
         ]
       }
      ;
-field.push(obj);
-     console.log(field);
+      field.push(obj);
+          console.log(field);
    }
+
+    delete(field,i){
+      field.splice(i, 1);
+      console.log(field);
+    }
 
    update(){
      console.log(this.config.sections);
