@@ -5,6 +5,11 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 @Component({
   selector: 'app-drag-and-drop',
   template: `
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+
   <div class="card mb-2" *ngFor = "let section of config.sections; let i = index">{{section.title}}
     <div class="card-body">
 
