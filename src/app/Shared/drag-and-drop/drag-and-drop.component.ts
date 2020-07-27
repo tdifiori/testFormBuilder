@@ -33,7 +33,7 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
             >X
             </span>
             </span>
-           
+       
           </div>
             <a 
             (click)="info(row.fields,i)" 
