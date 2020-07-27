@@ -43,18 +43,12 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
     </div>
   </div>
   <button type="button"  (click)="update()" class="btn btn-primary btn-sm" >Update</button> 
-
-
-
-
-
-
   `,
   styleUrls: ['./drag-and-drop.component.css']
 })
 export class DragAndDropComponent implements OnInit {
   
-  show: boolean = false;
+
 
   @Input('config') config:any
 
@@ -101,9 +95,6 @@ field.push(obj);
      console.log(this.config.sections);
    }
 
-  showModal(){
-    this.show = !this.show;
-  }
 
 
 }

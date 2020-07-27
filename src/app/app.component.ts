@@ -8,31 +8,6 @@ import { Router } from '@angular/router'
 @Component({
   selector: 'app-root',
   template: `
- <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Open Modal</button>
- 
-    <div class="modal" id="myModal" role="dialog">
-      <div class="modal-dialog">
-        <h4 class="modal-title">nuovo campo</h4>
-
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Modal Header </h4>
-            <h4 class="modal-title">....</h4>
-          </div>
-          <div class="modal-body">
-            <p>Some text in the modal.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>        
-      </div>
-    </div>    
-  
-
-
-
   <div class="container">
   <app-form-maker></app-form-maker>
 
