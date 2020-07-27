@@ -5,8 +5,7 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 @Component({
   selector: 'app-drag-and-drop',
   template: `
-<div class="container">
-
+  <div class="container">
 
   <div class="card mb-2" *ngFor = "let section of config.sections; let i = index">{{section.title}}
     <div class="card-body">
@@ -85,7 +84,7 @@ export class DragAndDropComponent implements OnInit {
       {
         "label": "codice fiscale",
         "type": "text",
-        "key": "codfiscale"+index,
+        "key": "codfiscale",
         "defaultValue":"",
         "rules":[
           {'type':"required"},
@@ -96,6 +95,8 @@ export class DragAndDropComponent implements OnInit {
       field.push(obj);
           console.log(field);
    }
+
+
 
     delete(field,i){
       field.splice(i, 1);
