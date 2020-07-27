@@ -85,7 +85,7 @@ export class DragAndDropComponent implements OnInit {
       {
         "label": "codice fiscale",
         "type": "text",
-        "key": "codfiscale",
+        "key": "codfiscale"+index,
         "defaultValue":"",
         "rules":[
           {'type':"required"},
