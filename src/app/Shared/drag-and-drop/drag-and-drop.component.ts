@@ -30,10 +30,11 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
             <a 
             (click)="info(row.fields)" 
             class="badge badge-success mr-1 mt-1 mb-1"
-            data-toggle="modal" 
-            data-target="#exampleModal"
-            >+</a>
 
+            >+</a>
+<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
         </div>
       
       </div>
