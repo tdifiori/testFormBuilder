@@ -5,8 +5,8 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 @Component({
   selector: 'app-drag-and-drop',
   template: `
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
+<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal" (click)="showModal()">
+  Launch demo modale
 </button>
 
 
@@ -48,26 +48,32 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 
 
 
-<!-- modal ------------ -->
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<!-- Modal -->
+<div class="modal" [class.show]="show" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+ aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon"><label for="editOwnerName">Deployment Name</label></span>
+						<input type="text" class="form-control" name="deploymentName" id="deploymentName" [(ngModel)]="deploymentName" placeholder=""
+						 autofocus autocomplete="off" />
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="showModal()">Close</button>
+				<button type="button" class="btn btn-primary" (click)="fnAddDeploytment()">Save changes</button>
+			</div>
+		</div>
+	</div>
 </div>
 
 
@@ -77,8 +83,8 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
   styleUrls: ['./drag-and-drop.component.css']
 })
 export class DragAndDropComponent implements OnInit {
-
-
+  
+  show: boolean = false;
 
   @Input('config') config:any
 
@@ -124,5 +130,10 @@ field.push(obj);
    update(){
      console.log(this.config.sections);
    }
+
+  showModal(){
+    this.show = !this.show;
+  }
+
 
 }
