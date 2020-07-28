@@ -38,7 +38,7 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
             <a 
             (click)="info(row.fields,i)" 
             class="badge badge-success mr-1 mt-1 mb-1"
-
+    
             >+</a>
 
         </div>
